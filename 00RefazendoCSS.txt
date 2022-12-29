@@ -1,0 +1,38 @@
+29-12-22
+
+Refazendo CSS.
+Objetivos do módulo:
+
+>Entender o CSS e porque ele é importante;
+>Aprender a usar cores e incluir backgrounds;
+>Dominar o uso de seletores;
+>Aprender o básico sobre Especificidade e Herança no CSS;
+>Aprender como incluir fontes;
+>Dominar o posicionamento dos elementos.
+
+Básico do CSS:
+
+CSS > <Cascade Style Sheets> (folhas de estilo em cascatas).
+Linguagem que define o estilo de um documento HTML;
+Não deve ser definida dentro de um documento HTML.
+
+Para incluir o css no arquivo html, o arquivo css deve estar salvo na mesma pasta do projeto com o nome "style.css", e deve ser incluido abaixo do Title, com a seguinte estrutura:
+
+<link rel="stylesheet" href="style.css">
+ou
+<link rel="stylesheet" href="...">com o endederço do arquivo dentro das "" do href.
+
+Como funciona uma regra do CSS:
+
+h1 { (selector)
+    color:blue; (collor = property, blue = value)
+    font-size:12px; (font-size = property, 12px = value)
+    }
+
+>o seletor aponta para o elemento a ser estilizado;
+>o bloco de declaração (entre chaves) contém uma ou mais declarações;
+>cada declaração é composta por duas informações separadas por dois pontos:
+	>propriedade;
+	>valor;
+
+01 - Primeiro CSS:
