@@ -1,0 +1,30 @@
+html {
+    background-color: #252323;
+    color: #488d8d;
+}
+
+header {
+    color: #488d8d;
+    background-color: #252323;
+}
+
+header h2 {
+    font-size: 25px;
+}
+
+
+.btn {
+    background-color: #252323;
+    color: #488d8d;
+    border-color: #488d8d;
+}
+
+.name {
+    background-color:#5f5757;
+    color: #488d8d;
+}
+
+.name ::placeholder {
+    background-color: #4d4a4a;
+    color: #488d8d;
+}

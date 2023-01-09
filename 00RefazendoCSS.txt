@@ -35,4 +35,46 @@ h1 { (selector)
 	>propriedade;
 	>valor;
 
+**05/01/2022**
+
 01 - Primeiro CSS:
+
+Feito no VsCode
+
+02 - Cores no CSS:
+Os browsers modernos suportam 140 nomes de cores diferentes.
+Os nomes, geralmente não é a forma principal como definimos as cores no CSS, existem outras formas:
+
+>nome;
+>valores rgb;
+>valores hexadecimais; (principal)
+>valores HSL (css3);
+>valores HWB (css4).
+
+Definir as cores pelo nome nem sempre é uma boa ooção, porque existem muito mais cores do que as descritas por seu nome e, além disso, existe a possibilidade de alguns browsers interpretarem um nome de cor como outro cor, por exemplo um verde-claro é claro em um browser e no outro é mais escuro, o que não acontece apontando pelo valor hexadecimal pois, a "proporção" das cores será sempre a mesma, mudando a visualização apenas por conta dos monitores.
+
+O Hexadecimal é um sistema numérico que consiste em 16 simbolos diferentes: 
+[0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F]
+sendo assim:
+0 = nada;
+F = maior da "escala";
+
+A cor Hexadecimal é ddefinida por um conjunto de 06 símbolos:
+
+#RRGGBB
+ | | |--->blue ou azul
+ | |--------->green ou verde
+ |---------------> red ou vermelho
+
+>exemplo de uma cor escrita em hexadecimal:
+
+#FF0000 -> vermelho;
+
+Exercicio informal:
+Aplicar alguns hexadecimais às tabelas do html já praticado.
+Vou recriar um exercicio com classes distintas para tentar aplicar o css.
+
+
+
+
+
