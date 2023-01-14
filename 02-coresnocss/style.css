@@ -1,4 +1,4 @@
-html {
+body {
     background-color: #252323;
     color: #488d8d;
 }
@@ -25,6 +25,16 @@ header h2 {
 }
 
 .name ::placeholder {
+    background-color: #4d4a4a;
+    color: #488d8d;
+}
+
+.email {
+    background-color: #4d4a4a;
+    color: #488d8d;
+}
+
+.email ::placeholder {
     background-color: #4d4a4a;
     color: #488d8d;
 }

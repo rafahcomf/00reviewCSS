@@ -1,0 +1,42 @@
+body {
+    background-image: url("https://cdn.arstechnica.net/wp-content/uploads/2019/02/46259778995_fa4f031d69_k-800x533.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    background-color: #524c4c;
+    color: #ad8044;
+    border: 2px solid #ad8044
+}
+
+header h1 {
+    padding: 10px;
+    text-align: center;
+}
+
+.subtitle {
+    background-color: #524c4c;
+    color: #ad8044;
+}
+
+.subtitle h3 {
+    padding: 10px;
+    border: 2px dashed #ad8044;
+}
+
+.list {
+    color:#ad8044;
+    padding: 10px;
+    border: 3px solid #ad8044;
+    border-radius: 1%;
+}
+
+.list li {
+    padding: 10px;
+    text-align: justify;
+}
+
+.list a {
+    color:#ad8044;
+}

@@ -37,11 +37,11 @@ h1 { (selector)
 
 **05/01/2022**
 
-01 - Primeiro CSS:
+<01 - Primeiro CSS>:
 
 Feito no VsCode
 
-02 - Cores no CSS:
+<02 - Cores no CSS>:
 Os browsers modernos suportam 140 nomes de cores diferentes.
 Os nomes, geralmente não é a forma principal como definimos as cores no CSS, existem outras formas:
 
@@ -73,6 +73,286 @@ A cor Hexadecimal é ddefinida por um conjunto de 06 símbolos:
 Exercicio informal:
 Aplicar alguns hexadecimais às tabelas do html já praticado.
 Vou recriar um exercicio com classes distintas para tentar aplicar o css.
+
+**09/01/23**
+
+<03-Background e Borders:>
+
+>Background: é uma propriedade CSS utilizada para definir efeitos de background de um elemento (o que vai ser exibido ao fundo do elemento).
+	
+	>Background-color é uma propriedade utilixada para definir a cor de 	fundo de um elemento:
+	
+	>background-image é uma propriedade que especifica uma imagem como fundo 	de um elemento;
+
+como colocar uma imagem como background:
+
+body {
+  background-image: url ("endereço da imagem"); (fica do tamanho da imagem,      	                    replicando em mosaico e muito grande)
+  background-repeat: no-repeat; (para que a imagem de background não se repita                       	                           em formato mosaico);
+  background-size: cover; (capa-se ajusta ao tamanho do browuser em janela);
+}
+
+duvida: no css somente podemos utilizar imagens hospedadas na web? 
+
+>border é uma proriedade do CSS utilizada para definir o estilo, largura e cor da borda de um elemento.
+
+somente utilizar a propriedade border com o valor de cor, não ocorrerá mudanças pois, nativamente, a propriedade border vem com seu valor de style = 0, sendo zero = nada selecionado. 
+
+estrutura (utilizando um h1 como exemplo:
+
+h1 {
+  color: #alguma_cor_hexadecimal;
+  border-color: #alguma outra cor hexadecimal;
+  border-width: 8px; (exemplo de espessura de borda);
+  border-style: solid; (existem outros "estilos" de bordas);
+}
+
+também pode ser estruturado da seguinte forma:
+
+h1 {
+  border: 2px (espessura primeiro) solid (estilo de borda) #corhexadecimal;
+}
+
+**11/01/2023**
+
+<04-Seletores>: (selectors)
+
+criar uma classe é a forma mais interessante de ulitizar os seletores.
+
+para selecionar uma classe, utilizamos o .(ponto) + o nome da classe, exemplo como classe "moon":
+
+.moon {
+  color: #000000;
+  backgroud-color: #5F9EA0
+}
+
+define a classe "moon" com cores de escrita em preto (#000000) e cor de fundo em cadetBlue (#5F9EA0);
+
+As classes servem para aplicar estilos a varios elementos ao mesmo tempo.
+quando queremos criar algo muito especifico, podemos usar um id ao inves da classe. 
+exemplo com green-text:
+
+#green-text {
+   color: #008000;
+}
+
+define as cores do texto em verde (#008000);
+por padrão, utilizamos o ID para apenas um elemento, não podendo ter mais de um ID dentro do código;
+
+<04.1-Seletores avançados>:
+
+* seletor estrela: aqui não selecionamos uma classe, id ou filho, o seletor * (star) seleciona todo o documento html;
+Pode ser usado para "resetar" ou "descartar" as configurações aplicadas no html como posição dos paragrafos e afins, para que possamos reconfigurar tudo no css;
+
+seletor de descendencia:
+
+li a {
+  color: red;
+}
+
+aplica a cor vermelha a todos os elementos a (anchor) de uma lista;
+qualquer "a" (anchor) que esteja dentro de um li, mesmo que tenham varios graus de descendencia, continua recebendo as propriedades;
+é mais abrangente que o seletor filho;
+exemplo:
+
+html:
+<ul>
+  <li><a href="xxxx">texto do link</a></li> filho direto li(mantera vermllho)
+  <li><a href="xxxx">texto do link</a></li> filho direto li(mantera vermelho)
+  <div>
+     <li><a href="xxxx">texto do link</a></li> filho da div (manterá vermelho)
+  </div>
+</ul>
+
+seletor filho:
+
+li > a {
+  color: red;
+}
+
+a sintaxe:
+
+todo "a" (anchor) que for um filho de li, recebera o estilo dentro de chaves {};
+ou seja: se o anchor estiver direto denro da estrutura de li, ele mantém o estilo, porém, se por algum motivo ele estiver dentro de uma estrutura de <div> ou algo assim, ele perte essa configuração, pois não é mais um filho direto de li.
+é mais "especifico" que o seletor de descendencia;
+exemplo:
+
+html:
+<ul>
+  <li><a href="xxxx">texto do link</a></li> filho direto li(mantera vermllho)
+  <li><a href="xxxx">texto do link</a></li> filho direto li(mantera vermelho)
+  <div>
+     <li><a href="xxxx">texto do link</a></li> filho da div (perde vermelho)
+  </div>
+</ul>
+
+seletor adjacente:
+imagine que queremos colocar um estilo em todo <h4> que vem LOGO DEPOIS de um <h1>, não dentro, mas sim, após:
+
+h1 + h4{
+border: 2px solid #000000;
+}
+
+aplica a borda solida em preto com 2px de espessura à todo <h4> que vem após um <h1>;
+
+seletor de atributo:
+
+a[href="xxx"] {
+  color: #000000;
+}
+
+sintaxe: 
+basicamente dizemos ao código: procure em todos os "a" (anchor) o atributo href="xxx", ou seja, "os atributos de href que sejam iguais a xxx" e aplique o seguinte estilo: cor preta (#0000000);
+
+algumas pseudo-classes:
+vamos pensar que gostariamos de aplicar um estilo ao segundo li de todas as listas do código:
+
+html:
+<ul>
+  <li>blabla bla bla ala</li> 
+  <li>blabla bla bla ala</li> (ficara laranja)
+  <li>blabla bla bla ala</li> 
+  <li>blabla bla bla ala</li> 
+  <li>blabla bla bla ala</li> 
+</ul>
+
+css:
+
+li:nth-of-type(2) {
+  color: #FFFF00;	
+}
+
+****FALTA FAZER UM EXERCICIO DE SELETORES, INFORMAL***
+
+
+**12/01/23**
+
+<05-Especificidade>:
+
+A especificidade determina quais regras CSS serão aplicadas.
+
+>O navegador pontua o seletor de acordo com sua estruttura;
+>Cada elemento, classe, id, vale pontos para este cálculo;
+ >pontuação: composta por 4 números (0,0,0,0);
+ >quanto mais a esquerda, maior a relevância da pontuação;
+ >vamos chamar esses números de a,b,c,d;
+   >regra da pontuação, sobrescrevendo a herança:
+     >cada elemento/pseudo-elemento -> d = +1 (0,0,0,1);
+     >cada classe / pseudo-classe / atributo -> c = +1 (0,0,1,0);
+     >cada id ->b = +1 (0,1,0,0);
+     >estilo inline -> a = +1 (1,0,0,0);
+
+  >exemplo de pontuação:
+    > div#container ul li -> (0,1,0,3)
+
+Quando há empate na pontuação, será considerado o último seletor que foi declarado.
+
+<06-Herança>:
+OS filhos herdando estilos dos pais.
+Para evitar as heranças nos estilos, podemos sobrescrever com especificidade, sendo mais espeficio:
+
+Exemplo 1: herdando:
+
+html:
+<div>
+  <h1>Planetas</h1>
+  <ul>
+    <li>Terra</li>
+    <li>Marte</li>
+    <li>Jupiter/li>
+   </ul>
+</div>
+
+CSS:           (ficaria toda a div em azul)
+div{
+   color: blue;
+}
+
+Exemplo 2: com especificidade, sobrescrevendo a herança:
+
+html:
+<div>
+  <h1>Planetas</h1>
+  <ul>
+    <li>Terra</li>
+    <li>Marte</li>
+    <li>Jupiter/li>
+   </ul>
+</div>
+
+
+CSS: 
+div {
+   color: blue;
+}
+
+div ul li{
+   color: red;
+}
+
+aponta que os ul e li dentro de div, devem ficar em vermelho, excluindo a herança da div, ficando apenas os que não estão em especifidade em azul, ou seja, apenas o <h1>.
+
+Propriedade inherit:
+herdar uma propriedade, uma caracteristica do pai no filho.
+
+exemplo: (sem inherit)
+
+html:
+<div>
+  <h1>Planetas</h1>
+  <ul>
+    <li>Terra</li>
+    <li>Marte</li>
+    <li>Jupiter/li>
+   </ul>
+</div>
+
+css:
+div{
+border: 2px solid;
+}
+
+ficaria uma borda de 2px em torno de toda a div, sendo essa do titulo ao final da lista;
+
+exemplo: (com inherit)
+
+html:
+<div>
+  <h1>Planetas</h1>
+  <ul>
+    <li>Terra</li>
+    <li>Marte</li>
+    <li>Jupiter/li>
+   </ul>
+</div>
+
+css:
+div{
+border 2px solid;
+}
+
+div ul {
+border: inherit;
+}
+
+ficaria uma borda de 2px em torno de toda a div, sendo essa do titulo ao final da lista e mais uma borda com a mesma configuração, somente em torno da lista;
+
+**13/01/23**
+
+**<07-Recriando um Site com CSS - 1>;**
+
+cores utilizadas: 
+​#f1c40f -> Amarelo
+#2c3e50 -> Azul
+#e74c3c -> Vermelho
+
+fazer uma pagina seguindo o mockup fornecido em aula;
+
+vou fazer dois: um seguindo o mockup oferecido e outro inserindo os dias da semana como tabela, utilizando as mesmas cores fornecidas.
+Também não vou copiar a parte de html fornecida, vou eu mesmo escrever a partir do mockup;
+
+Feito, mas ainda falta centralizar a linha de "dias da semana", sem resposta em como fazer isso no stackoverflow.
+Nas proximas aulas tem flexbox, vamos ver se aparece no curso.
 
 
 
