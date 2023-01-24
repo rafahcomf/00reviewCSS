@@ -20,7 +20,7 @@ table {
     background-color: #f1c40f;
 }
 
-th {
+table thead th{
     border: 2px solid #000000;
     text-align: center;
 }

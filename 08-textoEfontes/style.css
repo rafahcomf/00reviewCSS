@@ -1,0 +1,16 @@
+h2 {
+    font-family: 'Anton', Arial, sans-serif;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.p1 {
+    font-family: 'Comic Neue', sans-serif;
+    font-weight: 600;
+}
+
+.p2 {
+    font-family: 'Lobster', cursive;
+    line-height: 2;
+}
+

@@ -1,0 +1,50 @@
+body {
+    margin: 0px;
+}
+
+.header-container {
+    color: #a30f0f;
+    text-align: center;
+}
+
+.header-container h1 {
+    font-family:'Times New Roman', Times, serif
+}
+
+.post-container {
+    width: 70%;
+    height: 100%;
+    margin: 0px auto 0px auto;
+    background-color: #fffafa;
+}
+
+.post-container .post .date {
+    font-family: 'Roboto';
+    color: #008080;
+}
+
+.post-title {
+    font-family: 'Montserrat';
+}
+
+.post-subtitle {
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-style: italic;
+}
+
+.referency {
+    color: #014e4e;
+    text-decoration: none;
+}
+ 
+.post-container article .post-text {
+    font-family: 'Open Sans';
+}
+
+.post-container article .post-text a {
+    font-style: italic;
+    text-decoration: none;
+    color: black;
+}
+

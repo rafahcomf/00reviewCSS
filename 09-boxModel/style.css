@@ -1,0 +1,43 @@
+header h2 {
+    font-family: 'Unbounded', cursive;
+    font-size: 35px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+section h4 {
+    font-family: 'Prompt', sans-serif;
+    margin-left: 30px;
+}
+
+section p {
+    font-family: 'Comic Neue', cursive;
+    border: 2px solid black;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+article h4 {
+    font-family: 'Prompt', sans-serif;
+    margin-left: 30px;
+}
+
+article table {
+    border: dashed 3px #323232;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+article th {
+    font-family: 'Prompt', sans-serif;
+    margin-left: 30px;
+    border: dashed 1px #252525;
+}
+
+article td {
+    font-family: 'Comic Neue', cursive;
+    border: dashed 1px #252525;
+    padding: 5px;
+    text-align: center;
+}
+}

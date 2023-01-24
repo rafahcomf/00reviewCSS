@@ -354,6 +354,147 @@ Também não vou copiar a parte de html fornecida, vou eu mesmo escrever a parti
 Feito, mas ainda falta centralizar a linha de "dias da semana", sem resposta em como fazer isso no stackoverflow.
 Nas proximas aulas tem flexbox, vamos ver se aparece no curso.
 
+**16/01/23**
+
+**<08-texto e fontes>:**
+As fontes podem vir de dois lugares: 
+>Da web, como veremos na próxima aula;
+>Do Sistema operacional do USUÁRIO.
+
+para setar uma fonte do usuário:
+
+p{ (seletor)
+  font-family: Arial;
+}
+
+Neste caso foi utilizado a fonte especifica arial e não "toda sua familia", que pode ser usado para melhorar a experiencia do usuário em acordo com seu S.O.
+
+Existem os grupos de fontes "family-name" e os grupos "generic-family";
+
+os generic family são algumas fontes como serif, sans-serif, cursive, fantasy, monospace etc;
+
+e o family name seria o "font-family" com fontes mais especificas;
+
+ao definir uma fonte, o ideal é definir em posição 1 a primeira fonte desejada, na posição 2 a segunda fonte desejada ou aceitável para o caso e na posição 3, uma fonte genérica, caso o usuário não tenha acesso em seu equipamento, às fontes apontadas. 
+
+p{
+  font-family: Arial, Helvética, Sans-Serif;
+}
+
+**<font-size>:**
+
+>o font size define o tamanho da fonte;
+Utilizando o font-size, não nessariamente precisamos pautar o tamanho de um texto pelo tamanho original de h1,h2,<p> e etc, apesar de ser a melhor forma para que se enquadre em um padrão;
+
+**<font-weight>:**
+
+>o font-weight define o peso da fonte, podendo ser aplicado dentro dele a proriedade bold.
+um exemplo usando os 3 parametros, tendo como exemplo o seletor p:
+
+p {
+   font-family: monospace;
+   font-size: 20px;
+   font-weight: bold;
+}
+
+o font-weight NÃO SUBSTITUI a o <strong> no html pois, utlizando o <strong> podemos marcar pontos especificos do texto, direto no hmtl, com o font-wieght, para selecionarmos trechos do texto, estes textos deveriam estar encapsulados dentro de uma tag com classes.
+
+podemos também utilizar o font-weight com propriedade numéricas, aplicando o peso desejado ao texto:
+
+font-weight: 600; (fica como o bold, mesma intensidade)
+
+**<line-height>:**
+
+altera o tamanho do espaçamento entre as linhas, mesmo dentro de um mesmo parágrafo;
+
+**<text-allign>:**
+usado para alinhar o texto dentro do "escopo" do seletor;
+
+**<text-decoration>:**
+seria como uma "decoração" no texto, como sublinhado, italico, bold e afins.
+
+*ler o w3schools sobre os text decoration*
+
+
+**<08.1-Usando o Google-fontes>:**
+
+fonts.google.com para ver a lista de fontes no navegador.
+Seleciona as fontes desejadas e o google já mostrará o comando para adicionar as fontes ao projeto.
+
+insere o link do google abaixo da linha do "stylesheet";
+adicionar a fonte pelo nome na propriedade font-family e adicionar também uma fonte genérica;
+
+19/01/2023
+
+**<09-Box Model>:**
+
+Posicionamento de elementos utilizando o css. 
+O HTML trata os elementos (textos, imagens e etc) como uma box model.
+
+>content: O conteúdo da caixa onde aparecem textos ou imagens;
+
+>Padding: Espacaçamento ao redor de um conteúdo (seu preenchimento é 			    transparente;
+	    
+	    >Existem tipos de padding:
+	    >top: na parte superior do content;
+	    >bottom: na parte inferior do content;
+	    >left e right: esquera e direita do content;
+
+>Border: Uma borda que fica entre a margin e o padding;
+
+>Margin: limpa uma área fora da border (a margin é transparente).
+	   A margim é o que separa a borda do elemento do próximo elemento em   	   si;
+
+	   >Existe uma forma mais prática de definir a margin, dentro da 	  	       	    estrutura do css, todas de uma vez, seguindo a mesma prática da 		    border, no sentido horário, conforme segue a estrutura:
+	    
+	    h1 {
+		margin: 45px 0px 200px 30px;
+	    }	    
+
+	    ou seja: 45px (top) 0px (right) 200px (bottom) 30 px (left);
+	
+	    >também podemos configurar a margin como auto em uma das posições ou  	    em todas. caso tenhamos um width (largura do elemento) pre-definido,         	    para que a margem se adeque ao usuário ou as propriedades pré  	  	    definidas.
+
+
+*imagem com o conteudo das partes do box model salva na pasta referente*
+
+**23/01/23**
+
+<Recriando um site com CSS-2.>
+
+Criar um "blog" a partir do mockup;
+Não vou utilizar o HTML citado no texto, para praticar o fundamento.
+Intenção do exercicio é utilizar as fontes já do google;
+
+especificações:
+
+Fontes utilizadas:
+
+1. Elemento H1 = Montserrat
+
+2. Elementos com a classe date = Roboto
+
+3. Elementos com a classe post-content = Open Sans
+
+
+Cores:
+
+1. Background dos posts = #fffafa
+
+2. Cor da data = #008080
+
+Correção do exercicio:
+
+é sempre bom relativizar as classes, principalmente quando uma está dentro da outra.
+
+centralizar o post container: (não consegui sozinho);
+
+width: 70%;
+height: 100%;
+margin: 0px auto 0px auto;
+
+classificar o exercicio feito como v.02 e fazer um exatamente como o mockup.
+
 
 
 
